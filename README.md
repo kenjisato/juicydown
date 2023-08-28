@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# juicydown
+# juicedown
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/kenjisato/juicydown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kenjisato/juicydown/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/kenjisato/juicedown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kenjisato/juicedown/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of juicydown is to offer useful tools to minimize routine
+The goal of juicedown is to offer useful tools to minimize routine
 formatting of page contents on such CMS as Moodle where code editor
 silently ignore style and link tags. To generate CSS-inlined HTML, the
 package uses \[juicyjuce\] package along with \[knitr\] and \[markdown\]
@@ -16,12 +16,12 @@ packages.
 
 ## Installation
 
-You can install the development version of juicydown from
+You can install the development version of juicedown from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("kenjisato/juicydown")
+remotes::install_github("kenjisato/juicedown")
 ```
 
 ## Example
@@ -29,6 +29,6 @@ remotes::install_github("kenjisato/juicydown")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(juicydown)
+library(juicedown)
 ## basic example code
 ```

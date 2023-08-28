@@ -11,7 +11,5 @@
 #' @importFrom stringr str_split
 #' @importFrom stringr str_split_1
 #' @importFrom stringr str_squish
-#' @importFrom utils head
-#' @importFrom utils tail
 ## usethis namespace: end
 NULL

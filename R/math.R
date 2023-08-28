@@ -4,14 +4,16 @@ correct_equations_ <- function(text) {
   text <- gsub("\u3002$", "\u3002 $", text, fixed = TRUE)
 
   # math begin
-  math_lines <- which(head(text, -1) == "$$" & tail(text, -1) == "\\begin{aligned}")
+  math_lines <-
+    which(utils::head(text, -1) == "$$" & utils::tail(text, -1) == "\\begin{aligned}")
   for (i in math_lines) {
     text[[i]] <- "$$\\begin{aligned}"
     text[[i+1]] <- NA
   }
 
   # math end
-  math_lines <- which(head(text, -1) == "\\end{aligned}" & tail(text, -1) == "$$")
+  math_lines <-
+    which(utils::head(text, -1) == "\\end{aligned}" & utils::tail(text, -1) == "$$")
   for (i in math_lines) {
     text[[i]] <- "\\end{aligned}$$"
     text[[i+1]] <- NA

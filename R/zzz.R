@@ -1,16 +1,16 @@
 .onLoad <- function(libname, pkgname) {
   op <- options()
-  op.juicydown <- list(
-    juicydown.template = pkg_file("xml", "template.html"),
-    juicydown.article.css = pkg_file("css", "article.css"),
-    juicydown.div.css = pkg_file("css", "div.css")
+  op.juicedown <- list(
+    juicedown.template = pkg_file("xml", "template.html"),
+    juicedown.article.css = pkg_file("css", "article.css"),
+    juicedown.div.css = pkg_file("css", "div.css")
   )
-  toset <- !(names(op.juicydown) %in% names(op))
-  if (any(toset)) options(op.juicydown[toset])
+  toset <- !(names(op.juicedown) %in% names(op))
+  if (any(toset)) options(op.juicedown[toset])
 
   invisible()
 }
 
 .onAttach <- function(libname, pkgname) {
-  # packageStartupMessage("Welcome to juicydown")
+  # packageStartupMessage("Welcome to juicedown")
 }

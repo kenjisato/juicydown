@@ -1,8 +1,8 @@
 convert_markdown2html <- function(
     in_text, template = the$template, stylesheet = the$stylesheet) {
 
-  template <- getd(template, getOption("juicydown.template"))
-  stylesheet <- getd(stylesheet, getOption("juicydown.article.css"))
+  template <- getd(template, getOption("juicedown.template"))
+  stylesheet <- getd(stylesheet, getOption("juicedown.article.css"))
 
   tdir <- getd(the$tempdir, tempdir())
   dir <- getd(the$dir, tdir)
