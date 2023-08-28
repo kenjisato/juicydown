@@ -1,14 +1,31 @@
 #' Converts R Markdown file into HTML fragment with inlined styles
 #'
 #' @description
-#' This function facilitates writing contents for such CMS as Moodle with R Markdown.
+#' This function facilitates writing contents in R Markdown formats for CMS the
+#' source editor of which silently removes style tags. When run interactively,
+#' the resulting HTML code will be copied to the clipboard.
 #'
 #' It basically does three things:
+#'
 #' 1. it converts (R) Markdown file into a HTML file with
 #'    [knitr::knit()] + [markdown::mark()],
-#' 2. inlines style information with [juicyjuice::css_inline()], and then
+#' 2. embed CSS information in style atribute with [juicyjuice::css_inline()],
+#'    and then
 #' 3. extracts article/div element that is ready for copying and pasting into
-#'    Moodle's source editor.
+#'    CMS's source editor.
+#'
+#' @details
+#'
+#' # Details
+#'
+#' ## Change default behaviors with [options()]
+#'
+#' Currently, three global defaults are available. You can set these defaults to
+#' alter the appearance of the result.
+#'
+#' * `juicedown.template`: Defaults to `juicedown:::pkg_file("xml", "template.html")`
+#' * `juicedown.article.css`: Defaults to `juicedown:::pkg_file("css", "article.css")`
+#' * `juicedown.div.css`: `juicedown:::pkg_file("css", "article.css")`
 #'
 #' @param file character. Path to the (R)markdown file.
 #' @param dir character. Output directory.
@@ -34,8 +51,8 @@ convert <- function(file = NULL, dir = NULL, tag = c("article", "div"),
   if (length(file) > 1) {
     stop(str_glue("{sQuote('convert()')} can handle only one file at a time."))
   }
-  file <- getd(file, file.choose())
-  dir <- getd(dir, dirname(file))
+  file <- file %||% file.choose()
+  dir <- dir %||% dirname(file)
 
   # Clear 'the' internal data store.
   rm(list = ls(the), envir = the)
@@ -43,25 +60,33 @@ convert <- function(file = NULL, dir = NULL, tag = c("article", "div"),
   dir.create(the$tempdir)
   on.exit(unlink(the$tempdir, recursive = TRUE), add = TRUE)
 
+  # Read the Document
+  text <- readLines(file, warn = FALSE)
+  doc <- xfun::yaml_body(text)
+  yaml <- doc$yaml
+  body <- doc$body
+
   # Conversion options
   the$file <- file
   the$root.dir <- dirname(file)
-  the$dir <- dir
+  the$dir <- yaml$dir %||% dir
   the$tag <- match.arg(tag)
-  the$id <- id
-  the$full_html <- full_html
-  the$remove_script <- remove_script
+  the$id <- yaml$id %||% id
+  the$full_html <- yaml$full_html %||% full_html
+  the$clip <- yaml$clip %||% clip
+  the$remove_script <- yaml$remove_script %||% remove_script
 
-  the$stylesheet <- getd(stylesheet, getOption(str_glue("omu.{the$tag}.css")))
-  the$template <- getd(template, getOption(str_glue("omu.{the$tag}.template")))
+  the$stylesheet <- (stylesheet %||% yaml$stylesheet %||%
+                      getOption(str_glue("omu.{the$tag}.css")))
+  the$template <- (template %||% yaml$templaste %||%
+                       getOption(str_glue("omu.{the$tag}.template")))
 
-  # Conversion
-  text <- readLines(file, warn = FALSE)
+
   html <- if (grepl("r?md", tolower(tools::file_ext(file)))) {
     ## knitr::knit() & markdown::mark()
-    convert_markdown2html(text)
+    convert_markdown2html(body)
   } else {
-    text
+    body
   }
 
   # Full HTML to HTML Fragment for Moodle

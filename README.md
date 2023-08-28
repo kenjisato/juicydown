@@ -9,10 +9,11 @@
 <!-- badges: end -->
 
 The goal of juicedown is to offer useful tools to minimize routine
-formatting of page contents on such CMS as Moodle where code editor
+formatting of page contents on such CMS/LMS as Moodle where code editor
 silently ignore style and link tags. To generate CSS-inlined HTML, the
-package uses \[juicyjuce\] package along with \[knitr\] and \[markdown\]
-packages.
+package uses [juicyjuce](https://CRAN.R-project.org/package=juicyjuice)
+package along with [knitr](https://cran.r-project.org/package=knitr) and
+[markdown](https://cran.r-project.org/package=markdown) packages.
 
 ## Installation
 

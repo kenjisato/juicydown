@@ -11,9 +11,10 @@
 #' @return character. HTML block.
 convert_html2moodle <- function(
     in_text,
-    full_html = getd(the$full_html, FALSE),
-    tag = getd(the$tag, "body"), id = the$id,
-    remove_script = getd(the$remove_script, FALSE)) {
+    full_html = the$full_html %||% FALSE,
+    tag = the$tag %||% "body",
+    id = the$id,
+    remove_script = the$remove_script %||% FALSE) {
   # Conversion
   inlined_html <- css_inline(in_text)
   container_tag <- if (full_html) {

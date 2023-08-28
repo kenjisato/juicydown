@@ -3,6 +3,7 @@
 
 ## usethis namespace: start
 #' @importFrom dplyr %>%
+#' @importFrom rlang %||%
 #' @importFrom stats na.omit
 #' @importFrom stringr str_extract
 #' @importFrom stringr str_glue

@@ -6,10 +6,10 @@
 \usage{
 convert_html2moodle(
   in_text,
-  full_html = getd(the$full_html, FALSE),
-  tag = getd(the$tag, "body"),
+  full_html = the$full_html \%||\% FALSE,
+  tag = the$tag \%||\% "body",
   id = the$id,
-  remove_script = getd(the$remove_script, FALSE)
+  remove_script = the$remove_script \%||\% FALSE
 )
 }
 \arguments{

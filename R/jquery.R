@@ -1,7 +1,7 @@
 
 jquery <- function(){
 
-  jq <- if (getd(the$jquery, FALSE)) {
+  jq <- if (the$jquery %||% FALSE) {
     NULL
   } else {
     the$jquery <- TRUE
@@ -15,7 +15,7 @@ jquery <- function(){
 
 jquery_modal <- function() {
   jq <- jquery()
-  jqm <- if (getd(the$jquery_modal, FALSE)) {
+  jqm <- if (the$jquery_modal %||% FALSE) {
     NULL
   } else {
     the$jquery_modal <- TRUE

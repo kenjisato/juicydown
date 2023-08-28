@@ -40,15 +40,6 @@ pkg_file <- function(..., pkg = .packageName) {
 }
 
 
-getd <- function(x, default = NULL) {
-  if (!is.null(x)) {
-    x
-  } else {
-    default
-  }
-}
-
-
 dodge_name <- function(a, b){
   clash <- normalizePath(a, mustWork = FALSE) == normalizePath(b, mustWork = FALSE)
   if (clash && file.exists(b)) {

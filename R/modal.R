@@ -25,7 +25,7 @@ modal_dict_verify <- function(dict) {
 
 modal_register <- function(dict = NULL) {
 
-  if(!getd(the$modal, FALSE)) {
+  if(isFALSE(the$modal %||% FALSE)) {
     stop("modal_setup() has not been invoked.")
   }
   prefix <- the$modal_prefix

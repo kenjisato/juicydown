@@ -42,14 +42,30 @@ are allowed.}
 Invisibly returns a character vector identical to the result file.
 }
 \description{
-This function facilitates writing contents for such CMS as Moodle with R Markdown.
+This function facilitates writing contents in R Markdown formats for CMS the
+source editor of which silently removes style tags. When run interactively,
+the resulting HTML code will be copied to the clipboard.
 
 It basically does three things:
 \enumerate{
 \item it converts (R) Markdown file into a HTML file with
 \code{\link[knitr:knit]{knitr::knit()}} + \code{\link[markdown:mark]{markdown::mark()}},
-\item inlines style information with \code{\link[juicyjuice:css_inline]{juicyjuice::css_inline()}}, and then
+\item embed CSS information in style atribute with \code{\link[juicyjuice:css_inline]{juicyjuice::css_inline()}},
+and then
 \item extracts article/div element that is ready for copying and pasting into
-Moodle's source editor.
+CMS's source editor.
 }
 }
+\section{Details}{
+\subsection{Change default behaviors with \code{\link[=options]{options()}}}{
+
+Currently, three global defaults are available. You can set these defaults to
+alter the appearance of the result.
+\itemize{
+\item \code{juicedown.template}: Defaults to \code{juicedown:::pkg_file("xml", "template.html")}
+\item \code{juicedown.article.css}: Defaults to \code{juicedown:::pkg_file("css", "article.css")}
+\item \code{juicedown.div.css}: \code{juicedown:::pkg_file("css", "article.css")}
+}
+}
+}
+

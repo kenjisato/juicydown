@@ -1,11 +1,11 @@
 convert_markdown2html <- function(
     in_text, template = the$template, stylesheet = the$stylesheet) {
 
-  template <- getd(template, getOption("juicedown.template"))
-  stylesheet <- getd(stylesheet, getOption("juicedown.article.css"))
+  template <- template %||% getOption("juicedown.template")
+  stylesheet <- stylesheet %||% getOption("juicedown.article.css")
 
-  tdir <- getd(the$tempdir, tempdir())
-  dir <- getd(the$dir, tdir)
+  tdir <- the$tempdir %||% tempdir()
+  dir <- the$dir %||% tdir
 
   oopts_knit <- knitr::opts_knit$get()
   knitr::opts_knit$set(upload.fun = knitr::image_uri)
