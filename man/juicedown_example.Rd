@@ -21,11 +21,10 @@ List example files for the package. Show the path when the exact name is given.
 The package sample files are organized under samples directory like so:
 
 samples/
-├── from-html/
-│   └── sample.html
-└── include/
-├── pic/
-└── sample.Rmd
+|-- from-html/
+|   \code{-- sample.html }-- include/
+|-- pic/
+`-- sample.Rmd
 \itemize{
 \item \code{juicedown_example()} is equivalent to \verb{ls samples},
 \item \code{juicedown_example("from-html")} is to \verb{ls samples/from-html}, and

@@ -4,9 +4,9 @@
 \name{juicedown-package}
 \alias{juicedown}
 \alias{juicedown-package}
-\title{juicedown: juice + markdown: Convert (R) Markdown into HTML with Inline Styles}
+\title{juicedown: Juice + Markdown: Convert (R) Markdown into HTML with Inline Styles}
 \description{
-A convenient tool to create HTML with inline styles. It is particularly useful when working on CMS whose code editor eliminates style and link tags. The main use case of the package is the learning management system, Moodle. Additional helper functions for teaching purposes are provided.
+A convenient tool to create HTML with inline styles. It is particularly useful when working on a content management system (CMS) whose code editor eliminates style and link tags. The main use case of the package is the learning management system, Moodle. Additional helper functions for teaching purposes are provided.
 }
 \seealso{
 Useful links:

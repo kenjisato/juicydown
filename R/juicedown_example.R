@@ -8,11 +8,11 @@
 #' The package sample files are organized under samples directory like so:
 #'
 #' samples/
-#' ├── from-html/
-#' │   └── sample.html
-#' └── include/
-#'     ├── pic/
-#'     └── sample.Rmd
+#' |-- from-html/
+#' |   `-- sample.html
+#' `-- include/
+#'     |-- pic/
+#'     `-- sample.Rmd
 #'
 #' * `juicedown_example()` is equivalent to `ls samples`,
 #' * `juicedown_example("from-html")` is to `ls samples/from-html`, and
