@@ -14,6 +14,6 @@ HTML code span.
 }
 \description{
 This function inserts HTML snippet to help students memorize important concepts.
-To make this function to work, you need to run \code{anki_setup()} at the end of
+To make this function to work, you need to run \code{\link[=anki_setup]{anki_setup()}} somewhere in
 the markdown document.
 }

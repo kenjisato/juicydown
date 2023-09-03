@@ -2,6 +2,8 @@
 #' Hide/Show text
 #'
 #' This function inserts JavaScript code for anki texts.
+#' Call this function in a code chunk somewhere in your R Markdown file.
+#' Use [anki()] function with a inline r code, to make a hidden block.
 #'
 #' @param background character. Background color of the blank box.
 #' @param color character. Font color of the answer of the blank box.
@@ -43,7 +45,7 @@ anki_setup <- function(background = "yellow", color = "blue", border = "slateblu
 #' Hide/Show text
 #'
 #' This function inserts HTML snippet to help students memorize important concepts.
-#' To make this function to work, you need to run `anki_setup()` at the end of
+#' To make this function to work, you need to run [anki_setup()] somewhere in
 #' the markdown document.
 #'
 #' @param text character. Text to toggle.

@@ -10,5 +10,6 @@ tweak_footnote_highlight()
 Script block that makes highlighting possible.
 }
 \description{
-Highlight target link for footnotes
+Footnote highlighting is corrupt when CSS is in-lined. Fix this by
+calling this function in a code chunk somewhere in your R Markdown file.
 }

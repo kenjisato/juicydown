@@ -31,4 +31,6 @@ character. CSS/JavaScript code for anki texts.
 }
 \description{
 This function inserts JavaScript code for anki texts.
+Call this function in a code chunk somewhere in your R Markdown file.
+Use \code{\link[=anki]{anki()}} function with a inline r code, to make a hidden block.
 }

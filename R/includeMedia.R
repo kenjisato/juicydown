@@ -14,7 +14,9 @@
 #' file.remove(template)
 #'
 includeText <- function(path, data = parent.frame(), quiet = TRUE) {
-  path <- if (is.null(the$root.dir)) path else file.path(the$root.dir, path)
+  if (!xfun::is_abs_path(path) && !is.null(the$root.dir)) {
+    path <- file.path(the$root.dir, path)
+  }
   rendered_text <- knitr::knit(text = readLines(path), envir = data, quiet = quiet)
   knitr::asis_output(rendered_text)
 }
@@ -42,15 +44,17 @@ includeAudio <- function(url, preload = c("metadata", "auto", "none"),
 #'
 #' This function is a wrapper for [knitr::include_graphics()].
 #'
-#' @param src character. Path to the image.
+#' @param path character. Path to the image.
 #' @param ... Parameters passed to [knitr::include_graphics()], other than path.
 #'
 #' @return The result of [knitr::include_graphics()]
 #' @export
 #'
-includeGraphics <- function(src, ...) {
-  src <- if (is.null(the$root.dir)) src else file.path(the$root.dir, src)
-  knitr::include_graphics(path = src, ...)
+includeGraphics <- function(path, ...) {
+  if (!xfun::is_abs_path(path) && !is.null(the$root.dir)) {
+    path <- file.path(the$root.dir, path)
+  }
+  knitr::include_graphics(path = path, ...)
 }
 
 

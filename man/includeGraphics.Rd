@@ -4,10 +4,10 @@
 \alias{includeGraphics}
 \title{Include graphic media.}
 \usage{
-includeGraphics(src, ...)
+includeGraphics(path, ...)
 }
 \arguments{
-\item{src}{character. Path to the image.}
+\item{path}{character. Path to the image.}
 
 \item{...}{Parameters passed to \code{\link[knitr:include_graphics]{knitr::include_graphics()}}, other than path.}
 }

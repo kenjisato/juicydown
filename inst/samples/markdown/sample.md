@@ -4,7 +4,7 @@
 
 This is a sample **markdown** document.
 
-## What's this?
+## What is this for?
 
 1. Numbered list
 1. Item 2

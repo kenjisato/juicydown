@@ -1,6 +1,9 @@
 
 #' Counter factory.
 #'
+#' Define a counter with `cnt <- counter("type")`. Add cross-referenced label
+#' in your document with `cnt$set("ref")`. Refer to "ref" with `cnt$get("ref")`.
+#'
 #' @param label character. Default prefix for the counter.
 #' @param open character. Opening bracket such as "(" or "["
 #' @param close character. Closing bracket such as ")" or "]"

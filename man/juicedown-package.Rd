@@ -4,7 +4,7 @@
 \name{juicedown-package}
 \alias{juicedown}
 \alias{juicedown-package}
-\title{juicedown: juice+markdown to Generate HTML with Inline Styles from R Markdown v1}
+\title{juicedown: juice + markdown: Convert (R) Markdown into HTML with Inline Styles}
 \description{
 A convenient tool to create HTML with inline styles. It is particularly useful when working on CMS whose code editor eliminates style and link tags. The main use case of the package is the learning management system, Moodle. Additional helper functions for teaching purposes are provided.
 }
@@ -16,7 +16,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Kenji Sato \email{kenji@kenjisato.jp} (\href{https://orcid.org/0009-0000-4520-2560}{ORCID})
+\strong{Maintainer}: Kenji Sato \email{kenji@kenjisato.jp} (\href{https://orcid.org/0009-0000-4520-2560}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

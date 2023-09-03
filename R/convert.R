@@ -62,6 +62,11 @@
 #' @return Invisibly returns a character vector identical to the result file.
 #' @export
 #'
+#' @examples
+#' file <- juicedown_example("markdown", "sample.md")
+#' tdir <- tempdir()
+#' convert(file, dir = tdir, clip = FALSE)
+#' unlink(file.path(tdir, "sample.html"))
 convert <- function(file = NULL, dir = NULL, tag = NULL,
                     id = NULL, clip = TRUE, full_html = NULL,
                     remove_script = NULL, stylesheet = NULL, template = NULL) {

@@ -17,6 +17,9 @@ tweak_moodle_heading <- function() {
 
 #' Highlight target link for footnotes
 #'
+#' Footnote highlighting is corrupt when CSS is in-lined. Fix this by
+#' calling this function in a code chunk somewhere in your R Markdown file.
+#'
 #' @return Script block that makes highlighting possible.
 #' @export
 #'

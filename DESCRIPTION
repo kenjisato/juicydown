@@ -1,8 +1,8 @@
 Package: juicedown
-Title: juice+markdown to Generate HTML with Inline Styles from R Markdown v1
+Title: juice + markdown: Convert (R) Markdown into HTML with Inline Styles
 Version: 0.0.0.9000
 Authors@R: 
-    person("Kenji", "Sato", , "kenji@kenjisato.jp", role = c("aut", "cre"),
+    person("Kenji", "Sato", , "kenji@kenjisato.jp", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0000-4520-2560"))
 Description: A convenient tool to create HTML with inline styles. It is 
   particularly useful when working on CMS whose code editor eliminates style and
@@ -14,6 +14,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 URL: https://kenjisato.github.io/juicedown/
 Suggests: 
+    readxl,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 

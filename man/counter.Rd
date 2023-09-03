@@ -22,7 +22,8 @@ surrounded by a tag, linked to the referenced id.}
 List of functions to set and get counters with label.
 }
 \description{
-Counter factory.
+Define a counter with \code{cnt <- counter("type")}. Add cross-referenced label
+in your document with \code{cnt$set("ref")}. Refer to "ref" with \code{cnt$get("ref")}.
 }
 \examples{
 cnt <- counter("Quiz")

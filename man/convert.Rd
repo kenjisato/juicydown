@@ -89,3 +89,9 @@ the global option (such as \code{juicedown.article.css}) will be used.
 }
 }
 
+\examples{
+file <- juicedown_example("markdown", "sample.md")
+tdir <- tempdir()
+convert(file, dir = tdir, clip = FALSE)
+unlink(file.path(tdir, "sample.html"))
+}

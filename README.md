@@ -17,8 +17,14 @@ package along with [knitr](https://cran.r-project.org/package=knitr) and
 
 ## Installation
 
-You can install the development version of juicedown from
-[GitHub](https://github.com/) with:
+Sometime soon (hopefully!), you can install it from CRAN like so:
+
+``` r
+install.packages("juicedown")
+```
+
+For the time being, you can install the development version of juicedown
+from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
@@ -27,10 +33,13 @@ remotes::install_github("kenjisato/juicedown")
 
 ## Example
 
+``` r
+library(juicedown)
+```
+
 Main function is `convert()`. (Usually, you do not need `dir` argument)
 
 ``` r
-library(juicedown)
 convert(juicedown_example("markdown", "sample.md"), dir = ".", clip = FALSE)
 
 # See the result
@@ -50,6 +59,8 @@ List contents in the sample with
 juicedown_example("javascript")
 #> [1] "economics.xlsx" "sample.html"    "sample.Rmd"
 ```
+
+How to see the source:
 
 ``` r
 file.show(juicedown_example("javascript", "sample.Rmd"))
