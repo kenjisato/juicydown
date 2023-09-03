@@ -27,9 +27,30 @@ remotes::install_github("kenjisato/juicedown")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Main function is `convert()`. (Usually, you do not need `dir` argument)
 
 ``` r
 library(juicedown)
-## basic example code
+convert(juicedown_example("markdown", "sample.md"), dir = ".", clip = FALSE)
+
+# See the result
+# browseURL("sample.html")
+```
+
+List sample file directories with
+
+``` r
+juicedown_example()
+#> [1] "from-html"  "include"    "javascript" "markdown"   "yaml-meta"
+```
+
+List contents in the sample with
+
+``` r
+juicedown_example("javascript")
+#> [1] "economics.xlsx" "sample.html"    "sample.Rmd"
+```
+
+``` r
+file.show(juicedown_example("javascript", "sample.Rmd"))
 ```

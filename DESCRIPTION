@@ -23,11 +23,9 @@ Imports:
     juicyjuice,
     knitr,
     markdown,
-    readxl,
     rlang,
     rvest,
     sass,
     stringr,
-    whisker,
     xfun,
     xml2

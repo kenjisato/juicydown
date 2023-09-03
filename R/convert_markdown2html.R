@@ -31,7 +31,10 @@ convert_markdown2html <- function(
     text = intermediate_text,
     output = NULL, format = "html",
     template = template,
-    meta = list(css = combined_stylesheet),
+    meta = list(css = combined_stylesheet,
+                js = the$js,
+                header_includes = the$header_includes,
+                script = the$script),
     options = "-smartypants"
   )
 

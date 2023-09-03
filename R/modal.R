@@ -59,7 +59,7 @@ modal_setup <- function(prefix = "modal-") {
   the$modal_prefix <- prefix
   the$modal_entries <- new.env(parent = emptyenv())
 
-  jqm <- jquery_modal()
+  jquery_modal()
 
   css <- glue::glue("<style>
   a.modal-open {
@@ -80,8 +80,9 @@ modal_setup <- function(prefix = "modal-") {
   }
   </style>", .open = "(", .close = ")")
 
-  x <- paste(css, jqm, sep = "\n")
-  knitr::asis_output(x)
+  the$header_includes <- c(the$header_includes, css)
+
+  invisible()
 }
 
 

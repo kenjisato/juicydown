@@ -2,16 +2,16 @@
 % Please edit documentation in R/convert.R
 \name{convert}
 \alias{convert}
-\title{Converts R Markdown file into HTML fragment with inlined styles}
+\title{Converts R Markdown file into HTML fragment with inline styles}
 \usage{
 convert(
   file = NULL,
   dir = NULL,
-  tag = c("article", "div"),
+  tag = NULL,
   id = NULL,
   clip = TRUE,
-  full_html = FALSE,
-  remove_script = FALSE,
+  full_html = NULL,
+  remove_script = NULL,
   stylesheet = NULL,
   template = NULL
 )
@@ -32,7 +32,7 @@ are allowed.}
 \item{full_html}{logical. Produce the complete HTML or HTML block only?}
 
 \item{remove_script}{logical. Whether or not remove script tags. Ignored
-(set to FALSE) if \code{full_html = TRUE}. Default is FALSE}
+(set to FALSE) if \code{full_html = TRUE}.}
 
 \item{stylesheet}{character. Paths to the CSS files used in markdown::mark()}
 
@@ -63,9 +63,29 @@ Currently, three global defaults are available. You can set these defaults to
 alter the appearance of the result.
 \itemize{
 \item \code{juicedown.template}: Defaults to \code{juicedown:::pkg_file("xml", "template.html")}
-\item \code{juicedown.article.css}: Defaults to \code{juicedown:::pkg_file("css", "article.css")}
-\item \code{juicedown.div.css}: \code{juicedown:::pkg_file("css", "article.css")}
+\item \code{juicedown.article.css}: Defaults to \code{juicedown:::pkg_file("css", "article.scss")}
+\item \code{juicedown.div.css}: \code{juicedown:::pkg_file("css", "div.scss")}
 }
+}
+
+\subsection{Priority order}{
+
+You can pass conversion parameters in function argument and YAML metadata
+(under \code{juicedown} key) and for some parameters, global options, with priority
+given in that order. For instance, if the \code{stylesheet} parameter exists in the
+function call, it is used. If not and if YAML metadata has stylesheet key
+under juicedown key, then that will be used. In the below example, some.css
+used.
+
+\if{html}{\out{<div class="sourceCode markdown">}}\preformatted{---
+juicedown:
+  stylesheet:
+     some.css
+---
+}\if{html}{\out{</div>}}
+
+If neither the function argument nor missing YAML metadata exist, then
+the global option (such as \code{juicedown.article.css}) will be used.
 }
 }
 

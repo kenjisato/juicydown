@@ -2,7 +2,6 @@
 #' Hide/Show text
 #'
 #' This function inserts JavaScript code for anki texts.
-#' This command should be run at the end of the markdown document.
 #'
 #' @param background character. Background color of the blank box.
 #' @param color character. Font color of the answer of the blank box.
@@ -34,10 +33,10 @@ anki_setup <- function(background = "yellow", color = "blue", border = "slateblu
   }
   </style>", .open = "(", .close = ")")
 
-  js <- '<script src="https://kenjisato.github.io/omuecon/inst/js/anki.js"></script>'
+  the$header_includes <- c(the$header_includes, css)
+  the$js <- c(the$js, const$juicedown_anki)
 
-  x <- paste(css, jq, js, sep = "\n")
-  knitr::asis_output(x)
+  invisible()
 }
 
 

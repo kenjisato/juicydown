@@ -1,29 +1,25 @@
 
 jquery <- function(){
-
   jq <- if (the$jquery %||% FALSE) {
+    # the$jquery is TRUE if this function has been already called.
+    # NULL means FALSE, so go to else block...
     NULL
   } else {
     the$jquery <- TRUE
-    '<script
-  src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-  integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
-  crossorigin="anonymous"></script>'
+    the$js <- c(the$js, const$jquery)
   }
-  jq
+  invisible()
 }
 
 jquery_modal <- function() {
   jq <- jquery()
   jqm <- if (the$jquery_modal %||% FALSE) {
+    # the$jquery_modal is TRUE if this function has been already called.
+    # NULL means FALSE, so go to else block...
     NULL
   } else {
     the$jquery_modal <- TRUE
-    c(
-      jq,
-      '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>',
-      '<script src="https://kenjisato.github.io/omuecon/inst/js/modal.js"></script>'
-    )
+    the$js <- c(the$js, const$jquery_modal, const$juicedown_modal)
   }
-  paste(jqm, collapse = "\n")
+  invisible()
 }

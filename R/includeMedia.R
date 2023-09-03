@@ -41,10 +41,6 @@ includeAudio <- function(url, preload = c("metadata", "auto", "none"),
 #' Include graphic media.
 #'
 #' This function is a wrapper for [knitr::include_graphics()].
-#' Since omuecon creates intermediate files in a temporary directory,
-#' calling [knitr::include_graphics()] does not include local images.
-#' This function copies the media into the temporary directory and
-#' calls [knitr::include_graphics()].
 #'
 #' @param src character. Path to the image.
 #' @param ... Parameters passed to [knitr::include_graphics()], other than path.

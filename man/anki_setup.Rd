@@ -31,5 +31,4 @@ character. CSS/JavaScript code for anki texts.
 }
 \description{
 This function inserts JavaScript code for anki texts.
-This command should be run at the end of the markdown document.
 }

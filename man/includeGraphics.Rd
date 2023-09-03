@@ -16,8 +16,4 @@ The result of \code{\link[knitr:include_graphics]{knitr::include_graphics()}}
 }
 \description{
 This function is a wrapper for \code{\link[knitr:include_graphics]{knitr::include_graphics()}}.
-Since omuecon creates intermediate files in a temporary directory,
-calling \code{\link[knitr:include_graphics]{knitr::include_graphics()}} does not include local images.
-This function copies the media into the temporary directory and
-calls \code{\link[knitr:include_graphics]{knitr::include_graphics()}}.
 }

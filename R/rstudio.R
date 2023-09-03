@@ -1,17 +1,16 @@
+preview <- function(input, ...) {
+  convert(file = input, clip = FALSE, full_html = TRUE)
+  htmlFile <- paste0(tools::file_path_sans_ext(input), ".html")
+  message(
+    "Preview output created: ", htmlFile, "\n",
+    "CSS files used: \n", paste("  *", the$stylesheet, collapse = "\n")
+  )
 
-preview <- function(stylesheet = NULL, ...) {
-  css <- css_find(c(stylesheet, ...))
+  message(
+    "Please verify the final result on your CMS site.\n",
+    "To produce the final result, run juicedown::convert() ",
+    "in the console."
+  )
 
-  function(input, ...) {
-    convert(file = input, clip = FALSE, full_html = TRUE,
-            stylesheet = css)
-    htmlFile <- paste0(tools::file_path_sans_ext(input), ".html")
-    message("Preview output created: ", htmlFile, "\n",
-            "Please verify the final result on your Moodle site."
-    )
-    message("To produce the final result, run juicedown::convert() ",
-            "in the console.")
-
-    message("CSS files used: \n", paste(css, collapse = "\n"))
-  }
+  invisible(utils::browseURL(htmlFile))
 }

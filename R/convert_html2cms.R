@@ -1,4 +1,4 @@
-#' Convert a HTML file into a HTML block to be copied and pasted for Moodle.
+#' Convert a HTML file into a HTML block to be copied and pasted for CMS.
 #'
 #' @param in_text character. Character vector representing the HTML file to convert.
 #' @param full_html logical. If TRUE, produce complete html output,
@@ -9,7 +9,7 @@
 #' @param remove_script logical. If TRUE, script tags are all stripped out.
 #'
 #' @return character. HTML block.
-convert_html2moodle <- function(
+convert_html2cms <- function(
     in_text,
     full_html = the$full_html %||% FALSE,
     tag = the$tag %||% "body",
