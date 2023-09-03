@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kenjisato.github.io/juicydown/404.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/404.html</loc>
   </url>
   <url>
-    <loc>https://kenjisato.github.io/juicydown/LICENSE-text.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://kenjisato.github.io/juicydown/LICENSE.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://kenjisato.github.io/juicydown/authors.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/authors.html</loc>
   </url>
   <url>
-    <loc>https://kenjisato.github.io/juicydown/index.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/index.html</loc>
   </url>
   <url>
-    <loc>https://kenjisato.github.io/juicydown/reference/index.html</loc>
+    <loc>https://kenjisato.github.io/juicedown/reference/anki.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/anki_setup.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/convert.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/convert_html2cms.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/counter.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeAudio.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeFlickr.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeGraphics.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeQuestion.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeText.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/includeYT.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/juicedown-package.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/juicedown_example.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/tweak_footnote_highlight.html</loc>
+  </url>
+  <url>
+    <loc>https://kenjisato.github.io/juicedown/reference/tweak_moodle_heading.html</loc>
   </url>
 </urlset>
