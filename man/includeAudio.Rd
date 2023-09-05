@@ -19,7 +19,8 @@ includeAudio(
 the audio tag.}
 }
 \value{
-HTML audio tag is inserted into the document.
+An R object of class "knit_asis" (defined in the \link{knitr} package),
+the data of which is the HTML audio tag to insert into the document.
 }
 \description{
 Include Audio media.

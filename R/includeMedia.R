@@ -4,7 +4,9 @@
 #' @param data Environment or list used to knit the child document.
 #' @param quiet Passed to [knitr::knit()].
 #'
-#' @return NULL
+#' @return An R object of class "knit_asis" (defined in the [knitr] package),
+#'    the data of which represents the content of the child document (after
+#'    [knitr::knit()])
 #' @export
 #'
 #' @examples
@@ -29,7 +31,8 @@ includeText <- function(path, data = parent.frame(), quiet = TRUE) {
 #' @param alt character. Message displayed when the browser does not support
 #'   the audio tag.
 #'
-#' @return HTML audio tag is inserted into the document.
+#' @return An R object of class "knit_asis" (defined in the [knitr] package),
+#'    the data of which is the HTML audio tag to insert into the document.
 #' @export
 #'
 includeAudio <- function(url, preload = c("metadata", "auto", "none"),
