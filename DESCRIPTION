@@ -1,6 +1,6 @@
 Package: juicedown
 Title: 'juice' + 'markdown': Convert 'R Markdown' into 'HTML' with Inline Styles
-Version: 0.1.1
+Version: 0.1.1.9000
 Authors@R: 
     person("Kenji", "Sato", , "kenji@kenjisato.jp", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0000-4520-2560"))
